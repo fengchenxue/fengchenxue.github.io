@@ -23,7 +23,7 @@ repository               : "fengchenxue.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "wind.png"
+  avatar           : "wind.jpg"
   name             : "李佳鑫"
   pronouns         : # example: "she/her"  
   bio              : "一个游戏Gameplay程序员"  # A short bio or tagline for the author
