@@ -23,7 +23,7 @@ repository               : "fengchenxue.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "wind.png"
   name             : "李佳鑫"
   pronouns         : # example: "she/her"  
   bio              : "一个游戏Gameplay程序员"  # A short bio or tagline for the author
@@ -305,7 +305,7 @@ timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
