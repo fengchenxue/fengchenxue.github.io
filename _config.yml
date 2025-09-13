@@ -28,7 +28,8 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "一个游戏Gameplay程序员"  # A short bio or tagline for the author
   location         : 
-  employer         : "华威大学硕士/华南理工大学学士"
+  employer         : "华威大学硕士"
+  employer2        : "华南理工大学学士"
   uri              : # URL
   email            : "840814316@qq.com" 
 
