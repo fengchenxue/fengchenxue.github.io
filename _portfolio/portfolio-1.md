@@ -14,12 +14,14 @@ collection: portfolio
 其中神经网络部分，包括FCNN、CNN及多种变体、Encoder-head。
 
 ### 结果
-下图是一些神经网络的预测结果示例。
-![Encoder-Head1 结果]({{ "/images/portfolio/FULL_Encoder_0_s1_i7185.png" | relative_url }})
-![Encoder-Head2 结果]({{ "/images/portfolio/FULL_Encoder_1_s3_i7185.png" | relative_url }})
-![Encoder-Head3 结果]({{ "/images/portfolio/HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185.png" | relative_url }})
+下图是一小部分神经网络的预测结果示例。可以看出来前两个神经网络预测结果很差，而第三个看起来还好。
+![FULL_Encoder_0_s1_i7185]({{ "/images/portfolio/FULL_Encoder_0_s1_i7185.png" | relative_url }})
+![FULL_Encoder_1_s3_i7185]({{ "/images/portfolio/FULL_Encoder_1_s3_i7185.png" | relative_url }})
+![HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185]({{ "/images/portfolio/HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185.png" | relative_url }})
 
 虽然在大批量预测时，神经网络优于传统计算，但是在精度和速度上还是比不过查表法。
 但是Encoder-head类神经网络的预烘焙速度却比LUT查表法快，所以神经网络有自己的独特优势领域，那就是开发过程。
+
+
 开发时，开发者需要频繁调整材质属性，此时如果用查表法烘焙G1，有一点慢，而神经网络Encoder则要快的多。
 所以神经网络可以用在游戏开发过程，而最终打包时则使用LUT查表法。
