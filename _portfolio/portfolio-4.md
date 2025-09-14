@@ -13,6 +13,6 @@ collection: portfolio
 **环境光照**：经 Distribution2D 重要性采样的经纬度环境贴图
 **MIS**：多重重要性采样，结合“光源采样 + BSDF 采样”
 
-![survivor]({{ "/images/portfolio/Diffuse_NoDenoiser.png" | relative_url }})
-![survivor]({{ "/images/portfolio/Glass_NoDenoiser.png" | relative_url }})
-![survivor]({{ "/images/portfolio/MaterialScene_Denoiser.png" | relative_url }})
+![Diffuse_NoDenoiser]({{ "/images/portfolio/Diffuse_NoDenoiser.png" | relative_url }})
+![Glass_NoDenoiser]({{ "/images/portfolio/Glass_NoDenoiser.png" | relative_url }})
+![MaterialScene_Denoiser]({{ "/images/portfolio/MaterialScene_Denoiser.png" | relative_url }})

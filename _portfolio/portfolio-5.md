@@ -1,27 +1,19 @@
 ---
-title: "基于机器学习的分线段线性NDF的G1加速计算（硕士毕设）"
-excerpt: "对于最新的分线段NDF，使用神经网络来预测Microfacet模型中的G1部分，来加速其计算，并于传统方案和查表法作比较。<br/><img src='/images/portfolio/HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185.png'>"
+title: "小型聊天室"
+excerpt: "使用 WinSock + ImGui 实现带公网服务器的聊天室（广播/私聊/心跳/提示音）。<br/><img src='/images/portfolio/public_chat.png'>"
 collection: portfolio
 ---
 
-### 背景
-“Microfacet BSDFs Generated from NDFs and Explicit Microgeometry”这篇论文，提出了一种分线段表示NDF的方法，
-这相比传统的Beckmann和GGX等方法有更加灵活的表达性。不过这种先进的研究并没有落地到实际游戏引擎中，原因在于其计算代价较大，无法应用在实时渲染中。
-我经过一段时间研究，发现两个可以改进的点，一个是G1项，一个是多次散射补偿L2+的压缩。
-
-### 方案
-最终本研究聚焦于G1项的加速计算，对三种方案的性能与精度进行对比：1）传统计算 2）神经网络 3）LUT查表。
-其中神经网络部分，包括FCNN、CNN及多种变体、Encoder-head。
-
-### 结果
-下图是一小部分神经网络的预测结果示例。可以看出来前两个神经网络预测结果很差，而第三个看起来还好。
-![FULL_Encoder_0_s1_i7185]({{ "/images/portfolio/FULL_Encoder_0_s1_i7185.png" | relative_url }})
-![FULL_Encoder_1_s3_i7185]({{ "/images/portfolio/FULL_Encoder_1_s3_i7185.png" | relative_url }})
-![HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185]({{ "/images/portfolio/HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185.png" | relative_url }})
-
-虽然在大批量预测时，神经网络优于传统计算，但是在精度和速度上还是比不过查表法。
-但是Encoder-head类神经网络的预烘焙速度却比LUT查表法快，所以神经网络有自己的独特优势领域，那就是开发过程。
+**客户端/服务器**：多并发连接、消息路由、优雅上线/下线，公共频道 + 私聊窗口。
+**身份体系**：每客户端生成 UUID（id.txt），用于唯一标识与私聊会话关联；昵称可编辑并广播变更。
+**在线状态**：心跳机制（客户端 30s 发送 ping；服务器 60s 清理不活跃连接）。
+**提示音**：普通消息 / 私信使用不同音效；离线用户不缓存历史（设计取舍）。
+**公网部署**：租用阿里云 2C2G 服务器跑服务端；额外写 monitor.bat 守护进程异常退出。
 
 
-开发时，开发者需要频繁调整材质属性，此时如果用查表法烘焙G1，有一点慢，而神经网络Encoder则要快的多。
-所以神经网络可以用在游戏开发过程，而最终打包时则使用LUT查表法。
+![public_chat]({{ "/images/portfolio/public_chat.png" | relative_url }})
+![chat]({{ "/images/portfolio/chat.png" | relative_url }})
+![connection_workflow]({{ "/images/portfolio/connection_workflow.png" | relative_url }})
+![disconnection_workflow]({{ "/images/portfolio/disconnection_workflow.png" | relative_url }})
+![heaerbeat_dection_workflow]({{ "/images/portfolio/heaerbeat_dection_workflow.png" | relative_url }})
+![messgae_workflow]({{ "/images/portfolio/messgae_workflow.png" | relative_url }})
