@@ -1,6 +1,6 @@
 ---
 title: "基于机器学习的分线段线性NDF的G1加速计算（硕士毕设）"
-excerpt: "对于最新的分线段NDF，使用神经网络来预测Microfacet模型中的G1部分，来加速其计算，并于传统方案和查表法作比较。<br/><img src='/images/portfolio/HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185.png'>"
+excerpt: "对于近期研究新提出的分线段NDF，使用神经网络来预测Microfacet模型中的G1部分，来加速计算，并和传统方案和查表法作比较。<br/><img src='/images/portfolio/HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185.png'>"
 collection: portfolio
 ---
 
