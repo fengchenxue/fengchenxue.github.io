@@ -16,7 +16,7 @@ Chaos 可破坏：Fracture → Geometry Collection → 蓝图粒子与定时回�
 MetaHuman：从照片到 MetaHuman Creator，导入项目、设置 Leader Pose、驱动动画并在关卡起点/终点配置演出。
 
 
-关卡改造：森林图程序化植被参数重标定（密度/类型）、小型树木与原木取消碰撞；地形坡度调整；海岛图以可破坏物补可玩性。
+关卡改造：森林图程序化植被参数优化（密度/类型）、小型树木与原木取消碰撞；地形坡度调整；可破坏物补可玩性。
 
 
 ![fractureMode]({{ "/images/portfolio/fractureMode.png" | relative_url }})

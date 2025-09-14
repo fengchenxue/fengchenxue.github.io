@@ -1,27 +1,30 @@
 ---
-title: "基于机器学习的分线段线性NDF的G1加速计算（硕士毕设）"
-excerpt: "对于最新的分线段NDF，使用神经网络来预测Microfacet模型中的G1部分，来加速其计算，并于传统方案和查表法作比较。<br/><img src='/images/portfolio/HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185.png'>"
+title: "类吸血鬼幸存者"
+excerpt: "基于C++和DX11开发的类吸血鬼幸存者游戏。<br/><img src='/images/portfolio/survivor.png'>"
 collection: portfolio
 ---
 
-### 背景
-“Microfacet BSDFs Generated from NDFs and Explicit Microgeometry”这篇论文，提出了一种分线段表示NDF的方法，
-这相比传统的Beckmann和GGX等方法有更加灵活的表达性。不过这种先进的研究并没有落地到实际游戏引擎中，原因在于其计算代价较大，无法应用在实时渲染中。
-我经过一段时间研究，发现两个可以改进的点，一个是G1项，一个是多次散射补偿L2+的压缩。
+![survivor]({{ "/images/portfolio/survivor.png" | relative_url }})
 
-### 方案
-最终本研究聚焦于G1项的加速计算，对三种方案的性能与精度进行对比：1）传统计算 2）神经网络 3）LUT查表。
-其中神经网络部分，包括FCNN、CNN及多种变体、Encoder-head。
-
-### 结果
-下图是一小部分神经网络的预测结果示例。可以看出来前两个神经网络预测结果很差，而第三个看起来还好。
-![FULL_Encoder_0_s1_i7185]({{ "/images/portfolio/FULL_Encoder_0_s1_i7185.png" | relative_url }})
-![FULL_Encoder_1_s3_i7185]({{ "/images/portfolio/FULL_Encoder_1_s3_i7185.png" | relative_url }})
-![HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185]({{ "/images/portfolio/HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185.png" | relative_url }})
-
-虽然在大批量预测时，神经网络优于传统计算，但是在精度和速度上还是比不过查表法。
-但是Encoder-head类神经网络的预烘焙速度却比LUT查表法快，所以神经网络有自己的独特优势领域，那就是开发过程。
+- **虚拟相机跟随**：相机跟随玩家，屏幕外刷怪，难度随时间提升
+- **4 类敌人**：（含远程静止射击）：最近敌人自动攻击 + **对高血量前 N 名 AOE**
+- **碰撞系统**：圆/矩形重叠与推离；仅处理视野内对象
+- **瓦片地图**：读取 `tiles.txt`；支持无限平铺与固定边界两版
+- **存档/读档**：关闭/死亡/ESC 自动保存恢复
+- **对象池与容器**：`EnemyPool/BulletPool`；指针vector `myVector<T*>`（原地指针交换、低拷贝）
 
 
-开发时，开发者需要频繁调整材质属性，此时如果用查表法烘焙G1，有一点慢，而神经网络Encoder则要快的多。
-所以神经网络可以用在游戏开发过程，而最终打包时则使用LUT查表法。
+<div style="max-width:960px;margin:16px auto">
+  <video
+    controls
+    playsinline
+    preload="metadata"
+    style="width:100%;height:auto"
+    poster='{{ "/images/portfolio/survivor.png" | relative_url }}'>
+    <source src='{{ "/video/survivor.mp4" | relative_url }}' type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <p style="text-align:right;margin:.25rem 0 0">
+    <a href='{{ "/video/survivor.mp4" | relative_url }}'>下载/单独打开 MP4</a>
+  </p>
+</div>
