@@ -12,10 +12,20 @@ collection: portfolio
 
 
 ![public_chat]({{ "/images/portfolio/public_chat.png" | relative_url }})
+
+
 ![chat]({{ "/images/portfolio/chat.png" | relative_url }})
+
+
 ![connection_workflow]({{ "/images/portfolio/connection_workflow.png" | relative_url }})
+
+
 ![disconnection_workflow]({{ "/images/portfolio/disconnection_workflow.png" | relative_url }})
+
+
 ![heaerbeat_dection_workflow]({{ "/images/portfolio/heaerbeat_dection_workflow.png" | relative_url }})
+
+
 ![messgae_workflow]({{ "/images/portfolio/messgae_workflow.png" | relative_url }})
 
 

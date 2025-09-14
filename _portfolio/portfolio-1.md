@@ -16,7 +16,11 @@ collection: portfolio
 ### 结果
 下图是一小部分神经网络的预测结果示例。可以看出来前两个神经网络预测结果很差，而第三个看起来还好。
 ![FULL_Encoder_0_s1_i7185]({{ "/images/portfolio/FULL_Encoder_0_s1_i7185.png" | relative_url }})
+
+
 ![FULL_Encoder_1_s3_i7185]({{ "/images/portfolio/FULL_Encoder_1_s3_i7185.png" | relative_url }})
+
+
 ![HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185]({{ "/images/portfolio/HEAD_HeadZ64_256x128x64_relu_do0.00_s4_i7185.png" | relative_url }})
 
 虽然在大批量预测时，神经网络优于传统计算，但是在精度和速度上还是比不过查表法。
